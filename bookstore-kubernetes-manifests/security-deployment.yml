@@ -18,7 +18,7 @@ spec:
       serviceAccountName: book-admin
       containers:
         - name: security
-          image: icyfenix/bookstore-kubernetes-domain-security
+          image: zwb12580/bookstore-kubernetes-domain-security
           ports:
             - name: http-server
               containerPort: 80

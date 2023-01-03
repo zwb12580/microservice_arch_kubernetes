@@ -18,7 +18,7 @@ spec:
       serviceAccountName: book-admin
       containers:
         - name: payment
-          image: icyfenix/bookstore-kubernetes-domain-payment
+          image: zwb12580/bookstore-kubernetes-domain-payment
           ports:
             - name: http-server
               containerPort: 80

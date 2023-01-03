@@ -18,7 +18,7 @@ spec:
       serviceAccountName: book-admin
       containers:
         - name: gateway
-          image: icyfenix/bookstore-kubernetes-platform-gateway
+          image: zwb12580/bookstore-kubernetes-platform-gateway
           ports:
             - name: http-server
               containerPort: 8080

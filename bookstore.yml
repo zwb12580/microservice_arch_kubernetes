@@ -9,7 +9,7 @@ metadata:
   name: book-admin
   namespace: bookstore-microservices
 ---
-apiVersion: rbac.authorization.k8s.io/v1beta1
+apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: book-admin-role
@@ -32,7 +32,7 @@ rules:
   - get
   - watch
 ---
-apiVersion: rbac.authorization.k8s.io/v1beta1
+apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: book-admin-role-binding
@@ -375,7 +375,7 @@ spec:
           value: "80"
         - name: JAVA_TOOL_OPTIONS
           value: -agentlib:jdwp=transport=dt_socket,server=y,address=5005,suspend=n,quiet=y
-        image: icyfenix/bookstore-kubernetes-domain-account
+        image: zwb12580/bookstore-kubernetes-domain-account
         name: account
         ports:
         - containerPort: 80
@@ -405,7 +405,7 @@ spec:
           value: "80"
         - name: JAVA_TOOL_OPTIONS
           value: -agentlib:jdwp=transport=dt_socket,server=y,address=5005,suspend=n,quiet=y
-        image: icyfenix/bookstore-kubernetes-domain-payment
+        image: zwb12580/bookstore-kubernetes-domain-payment
         name: payment
         ports:
         - containerPort: 80
@@ -435,7 +435,7 @@ spec:
           value: "80"
         - name: JAVA_TOOL_OPTIONS
           value: -agentlib:jdwp=transport=dt_socket,server=y,address=5005,suspend=n,quiet=y
-        image: icyfenix/bookstore-kubernetes-domain-security
+        image: zwb12580/bookstore-kubernetes-domain-security
         name: security
         ports:
         - containerPort: 80
@@ -465,7 +465,7 @@ spec:
           value: "80"
         - name: JAVA_TOOL_OPTIONS
           value: -agentlib:jdwp=transport=dt_socket,server=y,address=5005,suspend=n,quiet=y
-        image: icyfenix/bookstore-kubernetes-domain-warehouse
+        image: zwb12580/bookstore-kubernetes-domain-warehouse
         name: warehouse
         ports:
         - containerPort: 80
@@ -495,7 +495,7 @@ spec:
           value: "8080"
         - name: JAVA_TOOL_OPTIONS
           value: -agentlib:jdwp=transport=dt_socket,server=y,address=5005,suspend=n,quiet=y
-        image: icyfenix/bookstore-kubernetes-platform-gateway
+        image: zwb12580/bookstore-kubernetes-platform-gateway
         name: gateway
         ports:
         - containerPort: 8080
